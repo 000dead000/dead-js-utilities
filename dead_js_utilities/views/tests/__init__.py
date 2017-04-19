@@ -1,2 +1,2 @@
 from .home import *
-from .basic import *
+# from .basic import *
