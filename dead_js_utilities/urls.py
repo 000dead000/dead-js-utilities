@@ -1,30 +1,34 @@
 # -*- coding: utf-8 -*-
 
 from django.conf.urls import url
+from django.conf.urls import include
 
 from .views import TestsHome
 
-# from .views import TestsBasicNormal
+from .views.basic import TestsBasicNormal
 # from .views import TestsBasicAJAX
 # from .views import TestsBasicStorage
 # from .views import TestsBasicRequests
 # from .views import TestsBasicMoment
 
 urlpatterns = [
+    # home
     url(
-        r'^tests$',
+        r'^$',
         TestsHome,
         name='tests-home'
     ),
+]
 
-    #
-    # # Basic
-    # url(
-    #     r'^tests/basic/normal$',
-    #     TestsBasicNormal,
-    #     name='tests-basic-normal'
-    # ),
-    #
+# Basic
+urlpatterns += [
+    # No AJAX
+    url(
+        r'^basic$',
+        TestsBasicNormal,
+        name='tests-basic-normal'
+    ),
+
     # url(
     #     r'^tests/basic/ajax$',
     #     TestsBasicAJAX,

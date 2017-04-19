@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 
 
 class TestsBasicNormalCBV(TemplateView):
-    template_name = "dar-js-utilities/tests/basic/normal.html"
+    template_name = "dead-js-utilities/tests/basic/normal/base.html"
 
     def get_context_data(self, **kwargs):
         context = super(TestsBasicNormalCBV, self).get_context_data(**kwargs)

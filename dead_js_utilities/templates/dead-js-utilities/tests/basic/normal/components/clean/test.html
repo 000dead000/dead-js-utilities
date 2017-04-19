@@ -1,0 +1,19 @@
+{% with test_prefix=test_base_prefix|add:"-clean" %}
+    <tr>
+        <td>clean</td>
+        <td>Clean a string value</td>
+        <td>
+            {% with form_id=test_prefix|add:"-form" control_1_id=test_prefix|add:"-control-1" %}
+                <form id="{{ form_id }}" class="no-submit">
+                    <input type="text" class="form-control" id="{{ control_1_id }}">
+                    <br>
+                    <div class="text-right">
+                        <button class="btn btn-info" type="submit">
+                            Clean
+                        </button>
+                    </div>
+                </form>
+            {% endwith %}
+        </td>
+</tr>
+{% endwith %}

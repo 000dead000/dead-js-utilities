@@ -1,13 +1,13 @@
-{% extends "dar-js-utilities/tests/home.html" %}
+{% extends "dead-js-utilities/tests/home.html" %}
 
-{% block dead_JS_UTILITIES_TESTS_BODY %}
+{% block TESTS_BODY %}
     <div class="text-right">
         <div class="btn-group" role="group" aria-label="...">
-            <button type="button" class="btn btn-success dar-refresh">
+            <button type="button" class="btn btn-success dead-refresh">
                 Recargar
             </button>
 
-            <a href="{% url 'dar-js-utilities:tests' %}" class="btn btn-primary">
+            <a href="{% url 'dead-js-utilities:tests-home' %}" class="btn btn-primary">
                 Regresar
             </a>
         </div>
@@ -15,7 +15,7 @@
 
     <h1>Basic</h1>
 
-    {% include "dar-js-utilities/tests/basic/navbar.html" %}
+    {% include "dead-js-utilities/tests/basic/navbar.html" %}
 
-    {% block dead_JS_UTILITIES_TESTS_BODY_CONTENT %}{% endblock %}
+    {% block TESTS_BODY_CONTENT %}{% endblock %}
 {% endblock %}
