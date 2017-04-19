@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 
 {% block BODY %}
+    <div class="text-right">
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-success dead-refresh">
+                Recargar
+            </button>
+
+            <a href="{% url 'dead-tests:home' %}" class="btn btn-primary">
+                Regresar
+            </a>
+        </div>
+    </div>
     <h1>DEAD JS Utilities <small>tests</small></h1>
     {% include "dead-js-utilities/tests/navbar.html" %}
 
