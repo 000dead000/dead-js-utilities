@@ -3,9 +3,9 @@
 from django.conf.urls import url
 from django.conf.urls import include
 
-from .views import TestsHome
+from .views.tests import TestsHome
 
-from .views.basic import TestsBasicNormal
+from .views.tests.basic import TestsBasicNormal
 # from .views import TestsBasicAJAX
 # from .views import TestsBasicStorage
 # from .views import TestsBasicRequests
