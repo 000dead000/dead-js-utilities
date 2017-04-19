@@ -1,16 +1,6 @@
 {% extends "dead-js-utilities/tests/home.html" %}
 
 {% block TEST_BODY %}
-    <div class="text-right">
-        <div class="btn-group" role="group" aria-label="...">
-            <a href="{% url 'dead-js-utilities:tests-home' %}" class="btn btn-primary">
-                Regresar
-            </a>
-        </div>
-    </div>
-
-    <h1>Basic</h1>
-
     {% include "dead-js-utilities/tests/basic/navbar.html" %}
 
     {% block TEST_BODY_CONTENT %}{% endblock %}
