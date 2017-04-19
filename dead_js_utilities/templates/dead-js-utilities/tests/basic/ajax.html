@@ -1,0 +1,24 @@
+{% extends "dar-js-utilities/tests/basic/base.html" %}
+
+{% block dead_JS_UTILITIES_TESTS_BODY_CONTENT %}
+    <span id="content">
+    </span>
+{% endblock %}
+
+{% block JS_BOTTOM %}
+    <script type="application/javascript">
+        var AJAX_URL = "{% url 'dar-js-utilities:tests-basic-ajax' %}";
+
+        {% include "dar-js-utilities/tests/basic/table.js" %}
+
+        $(document).ready(function () {
+            $.get(
+                AJAX_URL,
+                function(data){
+                    $("#content").replaceWith(data.html);
+                    dead_js_utilities_tests.init();
+                }
+            );
+        });
+    </script>
+{% endblock %}

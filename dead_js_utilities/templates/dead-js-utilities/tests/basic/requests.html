@@ -1,0 +1,48 @@
+{% extends "dar-js-utilities/tests/basic/base.html" %}
+
+{% block dead_JS_UTILITIES_TESTS_BODY_CONTENT %}
+    <div class="row">
+        <div class="col-xs-2">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation"><a class="request-link no-link" id="request-link-get" href="#">GET</a></li>
+                        <li role="presentation"><a class="request-link no-link" id="request-link-post" href="#">POST</a></li>
+                        <li role="presentation"><a class="request-link no-link" id="request-link-timeout" href="#">Timeout</a></li>
+                        <li role="presentation"><a class="request-link no-link" id="request-link-500" href="#">500</a></li>
+                        <li role="presentation"><a class="request-link no-link" id="request-link-limpiar" href="#">Limpiar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-10">
+            <div class="table-responsive">
+                <table id="result-table" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Método</th>
+                            <th>ID botón</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block JS_BOTTOM %}
+    <script type="application/javascript">
+        {% include "dar-js-utilities/tests/basic/requests.js" %}
+
+        var THIS_URL = "{% url 'dar-js-utilities:tests-basic-requests' %}";
+
+        $(document).ready(function () {
+            dead_js_utilities_tests.init();
+        });
+    </script>
+{% endblock %}

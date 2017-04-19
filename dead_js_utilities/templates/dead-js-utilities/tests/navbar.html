@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dead-test-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="dead-test-navbar">
+            <ul class="nav navbar-nav">
+                <li {% if not tests_tab %}class="active"{% endif %}>
+                    <a href="{% url 'dead-js-utilities:tests-home' %}">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    </a>
+                </li>
+
+                {% comment %}
+                <li {% if tests_tab == 'basic' %}class="active"{% endif %}>
+                    <a href="{% url 'dar-js-utilities:tests-basic-normal' %}">Basic</a>
+                </li>
+                {% endcomment %}
+            </ul>
+        </div>
+    </div>
+</nav>
