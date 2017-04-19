@@ -163,7 +163,7 @@ var dead_js_utilities_basic = {
             evt.preventDefault();
 
             var options = {
-                message: "¿Confirma que desea eliminar este registro?",
+                message: "¿Confirma que desea eliminar este registro?"
             };
 
             dead_js_utilities_bootbox.confirm_href(url, options);

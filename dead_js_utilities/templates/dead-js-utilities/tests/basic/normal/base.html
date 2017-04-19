@@ -13,6 +13,9 @@
                 </thead>
                 <tbody>
                     {% include "dead-js-utilities/tests/basic/normal/components/clean/test.html" %}
+                    {% include "dead-js-utilities/tests/basic/normal/components/no-link/test.html" %}
+                    {% include "dead-js-utilities/tests/basic/normal/components/delete-link/test.html" %}
+                    {% include "dead-js-utilities/tests/basic/normal/components/container/test.html" %}
                 </tbody>
             </table>
         </div>
@@ -25,6 +28,9 @@
             var TEST_BASE_PREFIX = "{{ test_base_prefix }}";
 
             {% include "dead-js-utilities/tests/basic/normal/components/clean/test.js" %}
+            {% include "dead-js-utilities/tests/basic/normal/components/no-link/test.js" %}
+            {% include "dead-js-utilities/tests/basic/normal/components/delete-link/test.js" %}
+            {% include "dead-js-utilities/tests/basic/normal/components/container/test.js" %}
         {% endwith %}
     </script>
 {% endblock %}
