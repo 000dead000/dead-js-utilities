@@ -1,0 +1,31 @@
+{% with test_prefix=test_base_prefix|add:"-uuid" %}
+<tr>
+    <td>uuid</td>
+    <td>Get UUID</td>
+    <td>
+        {% with form_id=test_prefix|add:"-form" control_1_id=test_prefix|add:"-control-1" button_1_id=test_prefix|add:"-button-1" button_2_id=test_prefix|add:"-button-2" %}
+            <form id="{{ form_id }}" class="no-submit">
+                <input type="text" class="form-control" id="{{ control_1_id }}">
+                <br>
+                <div class="text-right">
+                    <button
+                        class="btn btn-info"
+                        name="{{ button_1 }}"
+                        id="{{ button_1 }}"
+                        type="button">
+                        UUID
+                    </button>
+
+                    <button
+                        class="btn btn-primary"
+                        name="{{ button_2 }}"
+                        id="{{ button_2 }}"
+                        type="button">
+                        Plain UUID
+                    </button>
+                </div>
+            </form>
+        {% endwith %}
+    </td>
+</tr>
+{% endwith %}}
