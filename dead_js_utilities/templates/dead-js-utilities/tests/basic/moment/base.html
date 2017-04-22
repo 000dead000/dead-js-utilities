@@ -1,7 +1,6 @@
-{% extends "dar-js-utilities/tests/basic/base.html" %}
+{% extends "dead-js-utilities/tests/basic/base.html" %}
 
-{% block dead_JS_UTILITIES_TESTS_BODY_CONTENT %}
-
+{% block TEST_BODY_CONTENT %}
     <h3 class="text-info">Fecha actual</h3>
     <div class="table-responsive">
         <table class="table table-striped table-bordered">
@@ -69,7 +68,7 @@
 
 {% block JS_BOTTOM %}
     <script type="application/javascript">
-        {% include "dar-js-utilities/tests/basic/moment.js" %}
+        {% include "dead-js-utilities/tests/basic/moment/base.js" %}
 
         $(document).ready(function () {
            dead_js_utilities_tests.init();

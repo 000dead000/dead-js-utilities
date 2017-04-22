@@ -8,7 +8,7 @@ from .views.tests.basic import TestsBasicNormal
 from .views.tests.basic import TestsBasicAJAX
 from .views.tests.basic import TestsBasicStorage
 from .views.tests.basic import TestsBasicRequests
-# from .views import TestsBasicMoment
+from .views.tests.basic import TestsBasicMoment
 
 urlpatterns = [
     # home
@@ -46,9 +46,9 @@ urlpatterns += [
         name='tests-basic-requests'
     ),
 
-    # url(
-    #     r'^tests/basic/moment$',
-    #     TestsBasicMoment,
-    #     name='tests-basic-moment'
-    # ),
+    url(
+        r'^tests/basic/moment$',
+        TestsBasicMoment,
+        name='tests-basic-moment'
+    ),
 ]
