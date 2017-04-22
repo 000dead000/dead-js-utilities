@@ -15,7 +15,7 @@
             $.get(
                 AJAX_URL,
                 function(data){
-                    $("#content").replaceWith(data.html);
+                    $("tbody").replaceWith(data.html);
                     dead_js_utilities_tests.init();
                 }
             );

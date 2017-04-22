@@ -6,7 +6,7 @@ from django.conf.urls import include
 from .views.tests import TestsHome
 
 from .views.tests.basic import TestsBasicNormal
-# from .views import TestsBasicAJAX
+from .views import TestsBasicAJAX
 # from .views import TestsBasicStorage
 # from .views import TestsBasicRequests
 # from .views import TestsBasicMoment
@@ -29,11 +29,11 @@ urlpatterns += [
         name='tests-basic-normal'
     ),
 
-    # url(
-    #     r'^tests/basic/ajax$',
-    #     TestsBasicAJAX,
-    #     name='tests-basic-ajax'
-    # ),
+    url(
+        r'^tests/basic/ajax$',
+        TestsBasicAJAX,
+        name='tests-basic-ajax'
+    ),
     #
     # url(
     #     r'^tests/basic/storage$',

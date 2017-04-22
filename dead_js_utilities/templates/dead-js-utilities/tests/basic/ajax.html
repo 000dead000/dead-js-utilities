@@ -12,7 +12,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% include "dead-js-utilities/tests/basic/normal/content.html" %}
                 </tbody>
             </table>
         </div>
@@ -30,6 +29,16 @@
             {% include "dead-js-utilities/tests/basic/normal/components/container/test.js" %}
             {% include "dead-js-utilities/tests/basic/normal/components/uuid/test.js" %}
             {% include "dead-js-utilities/tests/basic/normal/components/swap-divs/test.js" %}
+
+            $(document).ready(function () {
+                $.get(
+                    AJAX_URL,
+                    function(data){
+                        $("tbody").replaceWith(data.html);
+                        dead_js_utilities_tests.init();
+                    }
+                );
+            });
         {% endwith %}
     </script>
 {% endblock %}

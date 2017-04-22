@@ -3,15 +3,15 @@
 import time
 
 from django.views.generic import TemplateView
-from django.template.loader import render_to_string
 
-from dead_js_utilities.mixins import AjaxResponseMixin
-from dead_js_utilities.mixins import JSONResponseMixin
-from dead_js_utilities.mixins import EnsureCSRFMixin
+from dead_common.mixins import AjaxResponseMixin
+from dead_common.mixins import JSONResponseMixin
+from dead_common.mixins import EnsureCSRFMixin
+from dead_common.utilities import render_template_to_string
 
 
 class TestsBasicAJAXCBV(EnsureCSRFMixin, JSONResponseMixin, AjaxResponseMixin, TemplateView):
-    template_name = "dar-js-utilities/tests/basic/ajax.html"
+    template_name = "dead-js-utilities/tests/basic/ajax.html"
 
     def get_context_data(self, **kwargs):
         context = super(TestsBasicAJAXCBV, self).get_context_data(**kwargs)
@@ -22,12 +22,12 @@ class TestsBasicAJAXCBV(EnsureCSRFMixin, JSONResponseMixin, AjaxResponseMixin, T
         return context
 
     def get_ajax(self, request, *args, **kwargs):
-        template_file = "dar-js-utilities/tests/basic/table.html"
+        template_file = "dead-js-utilities/tests/basic/normal/content.html"
         params = {}
 
-        html = render_to_string(
-            template_name=template_file,
-            context=params,
+        html = render_template_to_string(
+            template_file=template_file,
+            params=params,
             request=request
         )
 
