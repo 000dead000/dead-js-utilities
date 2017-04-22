@@ -21,7 +21,7 @@
 {% block JS_BOTTOM %}
     <script type="application/javascript">
         {% with test_base_prefix="dead-test-item" %}
-            var TEST_BASE_PREFIX = "{{ test_base_prefix }}";
+            var AJAX_URL = "{% 'dead-js-utilities:tests-basic-ajax' %}";
 
             {% include "dead-js-utilities/tests/basic/normal/components/clean/test.js" %}
             {% include "dead-js-utilities/tests/basic/normal/components/no-link/test.js" %}
