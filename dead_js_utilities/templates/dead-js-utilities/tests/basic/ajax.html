@@ -20,7 +20,7 @@
 
 {% block JS_BOTTOM %}
     <script type="application/javascript">
-        var AJAX_URL = "{% 'dead-js-utilities:tests-basic-ajax' %}";
+        var AJAX_URL = "{% url 'dead-js-utilities:tests-basic-ajax' %}";
 
         {% include "dead-js-utilities/tests/basic/normal/components/clean/test.js" %}
         {% include "dead-js-utilities/tests/basic/normal/components/no-link/test.js" %}
