@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from django.conf.urls import url
-from django.conf.urls import include
 
 from .views.tests import TestsHome
 
 from .views.tests.basic import TestsBasicNormal
-from .views import TestsBasicAJAX
+from .views.tests.basic import TestsBasicAJAX
 # from .views import TestsBasicStorage
 # from .views import TestsBasicRequests
 # from .views import TestsBasicMoment
