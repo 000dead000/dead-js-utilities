@@ -1,22 +1,7 @@
 {% extends "dead-js-utilities/tests/basic/base.html" %}
 
 {% block TEST_BODY_CONTENT %}
-    {% with test_base_prefix="dead-test-item" %}
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>Function</th>
-                        <th>Description</th>
-                        <th>Example</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% include "dead-js-utilities/tests/basic/normal/content.html" %}
-                </tbody>
-            </table>
-        </div>
-    {% endwith %}
+    {% include "dead-js-utilities/tests/basic/normal/content.html" %}
 {% endblock %}
 
 {% block JS_BOTTOM %}

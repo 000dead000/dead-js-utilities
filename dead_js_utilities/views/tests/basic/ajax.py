@@ -35,8 +35,6 @@ class TestsBasicAJAXCBV(EnsureCSRFMixin, JSONResponseMixin, AjaxResponseMixin, T
             'html': html,
         }
 
-        time.sleep(3)
-
         return self.render_to_json_response(data)
 
 TestsBasicAJAX = TestsBasicAJAXCBV.as_view()

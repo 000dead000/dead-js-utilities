@@ -13,18 +13,14 @@ var dead_js_utilities_test_uuid = {
         var test_prefix = this.get_test_prefix();
 
         var form_id = test_prefix + "-form";
-        var form_obj = $("#" + form_id);
-
-        var control_1_id = test_prefix + "-control-1";
-        var control_1_obj = $("#" + control_1_id);
 
         var button_1_id = test_prefix + "-button-1";
-        var button_1_obj = $("#" + button_1_id);
-
         var button_2_id = test_prefix + "-button-2";
-        var button_2_obj = $("#" + button_2_id);
-        
-        form_obj.on("submit", function (evt, button) {
+
+        $("body").on("submit", "#" + form_id, function (evt, button) {
+            var control_1_id = test_prefix + "-control-1";
+            var control_1_obj = $("#" + control_1_id);
+
             var value;
 
             if (button == "button-2")
@@ -35,11 +31,15 @@ var dead_js_utilities_test_uuid = {
             control_1_obj.val(value);
         });
 
-        button_1_obj.on("click", function () {
+        $("body").on("click", "#" + button_1_id, function () {
+            var form_obj = $("#" + form_id);
+
             form_obj.trigger("submit", "button-1");
         });
 
-        button_2_obj.on("click", function () {
+        $("body").on("click", "#" + button_2_id, function () {
+            var form_obj = $("#" + form_id);
+
             form_obj.trigger("submit", "button-2");
         });
     }

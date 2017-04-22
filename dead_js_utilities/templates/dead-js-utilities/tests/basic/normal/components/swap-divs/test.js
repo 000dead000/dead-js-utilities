@@ -31,32 +31,16 @@ var dead_js_utilities_test_swap_divs = {
     },
 
     /**
-     * Initial div
-     */
-    initial_div: function () {
-        var test_prefix = this.get_test_prefix();
-
-        var control_2_id = test_prefix + "-control-2";
-        var control_2_obj = $("#" + control_2_id);
-
-        control_2_obj.hide();
-    },
-
-    /**
      * Init
      */
     init: function () {
         var _this = this;
         var test_prefix = this.get_test_prefix();
-
         var button_1_id = test_prefix + "-button-1";
-        var button_1_obj = $("#" + button_1_id);
 
-        button_1_obj.on("click", function () {
+        $("body").on("click", "#" + button_1_id, function () {
             _this.swap();
         });
-
-        _this.initial_div();
     }
 };
 
