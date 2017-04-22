@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 
 
 class TestsBasicStorageCBV(TemplateView):
-    template_name = "dar-js-utilities/tests/basic/storage.html"
+    template_name = "dead-js-utilities/tests/basic/storage/base.html"
 
     def get_context_data(self, **kwargs):
         context = super(TestsBasicStorageCBV, self).get_context_data(**kwargs)
