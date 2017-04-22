@@ -1,6 +1,6 @@
-{% extends "dar-js-utilities/tests/basic/base.html" %}
+{% extends "dead-js-utilities/tests/basic/base.html" %}
 
-{% block dead_JS_UTILITIES_TESTS_BODY_CONTENT %}
+{% block TEST_BODY_CONTENT %}
     <div class="row">
         <div class="col-xs-2">
             <div class="panel panel-default">
@@ -37,9 +37,9 @@
 
 {% block JS_BOTTOM %}
     <script type="application/javascript">
-        {% include "dar-js-utilities/tests/basic/requests.js" %}
+        {% include "dead-js-utilities/tests/basic/requests/base.js" %}
 
-        var THIS_URL = "{% url 'dar-js-utilities:tests-basic-requests' %}";
+        var THIS_URL = "{% url 'dead-js-utilities:tests-basic-requests' %}";
 
         $(document).ready(function () {
             dead_js_utilities_tests.init();

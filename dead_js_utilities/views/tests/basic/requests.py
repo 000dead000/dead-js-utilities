@@ -7,13 +7,13 @@ from django.utils.timezone import now
 
 from django.views.generic import TemplateView
 
-from dead_js_utilities.mixins import AjaxResponseMixin
-from dead_js_utilities.mixins import JSONResponseMixin
-from dead_js_utilities.mixins import EnsureCSRFMixin
+from dead_common.mixins import AjaxResponseMixin
+from dead_common.mixins import JSONResponseMixin
+from dead_common.mixins import EnsureCSRFMixin
 
 
 class TestsBasicRequestsCBV(EnsureCSRFMixin, JSONResponseMixin, AjaxResponseMixin, TemplateView):
-    template_name = "dar-js-utilities/tests/basic/requests.html"
+    template_name = "dead-js-utilities/tests/basic/requests/base.html"
 
     def get_context_data(self, **kwargs):
         context = super(TestsBasicRequestsCBV, self).get_context_data(**kwargs)

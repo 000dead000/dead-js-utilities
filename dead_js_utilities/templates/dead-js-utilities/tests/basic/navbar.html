@@ -10,6 +10,10 @@
     <li role="presentation" {% if tests_subtab == 'storage' %}class="active"{% endif %}>
         <a href="{% url 'dead-js-utilities:tests-basic-storage' %}">Storage</a>
     </li>
+
+    <li role="presentation" {% if tests_subtab == 'requests' %}class="active"{% endif %}>
+        <a href="{% url 'dead-js-utilities:tests-basic-requests' %}">Requests</a>
+    </li>
 </ul>
 
 <br>
