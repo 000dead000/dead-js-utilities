@@ -17,10 +17,7 @@ urlpatterns = [
         TestsHome,
         name='tests-home'
     ),
-]
 
-# Basic
-urlpatterns += [
     # No AJAX
     url(
         r'^basic$',
